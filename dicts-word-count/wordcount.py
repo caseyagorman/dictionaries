@@ -9,8 +9,13 @@ def word_count(filename):
         for word in line:
             word = re.sub(r'[^\w\s]','',word)
             word = word.lower()
+            if word == "i":
+                word = word.upper()
             word_counts[word] = word_counts.get(word, 0) + 1
-    print word_counts
+
+    for key, val in word_counts.items():
+        print key, val
+
     return word_counts
 
 
