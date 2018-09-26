@@ -20,3 +20,11 @@ def word_count(filename):
 
 
 word_count("test.txt")
+
+def sort_words(word_counts):
+    word_counts = sorted(word_counts)
+    print word_counts
+
+
+word_counts = word_count("test.txt")
+sort_words(word_counts)
